@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  font-family: 'Poppins', sans-serif;
+  background-color: #5d4954;
+}
+.logo {
+  color: rgb(226, 226, 226);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 20px;
+}
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+}
+.nav-links li {
+  list-style: none;
+}
+li a:hover {
+  color: #F1A9A4;
+}
+.nav-links a {
+  color: rgb(226, 226, 226);
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 14px;
+}
+.burger {
+  display: none;
+}
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: rgb(226, 2226, 226);
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+@media screen and (max-width:768px) {
+body {
+  overflow-x: hidden;
+}
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background-color: #5d4954;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+  .nav-links li {
+    opacity: 0;
+  }
+  .burger{
+    display: block;
+    cursor: pointer;
+  }
+}
+
+.nav-active{
+  transform: translateX(0%);
+}
+@media screen and (max-width:2162px) {
+  .nav-links {
+    width: 40%;
+  }
+}
+
+
+@keyframes navLinkFade {
+  from{
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+
+
+
+
+
+
+
+.intro-text {
+  width: 30%;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.5s all ease-in-out;
+  position: relative;
+  top: 25vh;
+  left: 3vh;
+  }
+.intro-appear {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.codeIMG {
+  height: 35vh;
+  float: right;
+  margin: auto 10px;
+  margin-bottom: 750px;
+
+}
+
+.cloudsIMG {
+  height: 90vh;
+  width: 100%;
+  display: inline-flex;
+}
